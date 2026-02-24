@@ -3,5 +3,8 @@
 # on MacOS opens manpage in preview for easy reading
 function preman() { mandoc -T pdf "$(/usr/bin/man -w $@)" | open -fa Preview }
 
-#Pretty/Clean git output LESS=FRSX
+# Pretty/Clean git output LESS=FRSX
 export LESS=FRX
+
+# Chrome related, alias for chrome
+# alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --profile-directory=\"Default\""
