@@ -6,8 +6,16 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # on MacOS opens manpage in preview for easy reading
 function preman() { mandoc -T pdf "$(/usr/bin/man -w $@)" | open -fa Preview }
 
+# Slightly pretty ls
+alias ls="ls -G"
+
 # Pretty/Clean git output LESS=FRSX
 export LESS=FRX
+
+# short for zed (test for zed if installed alias it z)
+if command -v zed >/dev/null 2>&1; then
+    alias z="zed"
+fi
 
 # Chrome related, alias for chrome
 # alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --profile-directory=\"Default\""
